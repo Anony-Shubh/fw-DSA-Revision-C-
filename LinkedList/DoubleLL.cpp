@@ -40,6 +40,18 @@ class DLL
         }
     }
 
+    void pop_front()
+    {
+        Node* temp = head;
+        head = head->next;
+        if(head!=NULL)
+        {
+            head->prev=NULL;
+        }
+        temp->next=NULL;
+        delete temp;
+    }
+
     void printDll()
     {
         Node* temp = head;
@@ -62,6 +74,9 @@ int main()
 
     ll.printDll();
 
+    ll.pop_front();
+    ll.pop_front();
+    ll.printDll();
 
     return 0;
 }
