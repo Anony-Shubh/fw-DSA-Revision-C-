@@ -39,6 +39,7 @@ int main()
 {
     Stack st;
     int n;
+    cout<<"Enter the length of the Stack: ";
     cin>>n;
     for(int i=0;i<n;i++)
     {
